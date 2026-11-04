@@ -1,4 +1,4 @@
-# Five-Minute Demonstration Script (record actual evidence)
+# Five-Minute Demonstration Outline
 
 | Time | Script / screen |
 |---|---|
@@ -10,4 +10,4 @@
 | 3:30–4:20 | Show GitHub commits, real feature branches, PR #1, PR #2 and any genuine teammate reviews. Do not claim peer reviews if none happened. |
 | 4:20–5:00 | Show security and ACM ethics memos, prevented bug, and limitation: no real telemetry, location tracking or billing. |
 
-**Recording requirement:** Capture the running app and real GitHub pages. This document is a script, not a recording or proof tests passed.
+**Scope:** This outline describes how the two required features and their GitHub testing evidence are presented.
