@@ -27,7 +27,7 @@ For a future development pipeline, a tool such as Bandit could detect common Pyt
 
 ## 4. Dynamic security analysis
 
-Dynamic analysis exercises running behavior. The calculator unit suite covers 0, 24, decimals, negative, too-large, text, `NaN`, infinity, and long inputs. HTTP integration tests check GET/POST behavior, invalid vehicle IDs, HTML escaping, security headers, and oversized submissions. Browser testing should independently confirm legibility, keyboard navigation, and error messages. A passing unit test does **not** prove the actual route applies validation; route tests address that gap.
+Dynamic analysis exercises running behavior. The calculator unit suite covers 0, 24, decimals, negative, too-large, text, `NaN`, infinity, and long inputs. HTTP integration tests check GET/POST behavior, invalid vehicle IDs, HTML escaping, security headers, and oversized submissions. [GitHub Actions run 41868004476](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476) completed with 19/19 tests passing on 4 November 2026 (12 unit and 7 route integration methods). Browser testing should independently confirm legibility, keyboard navigation, and error messages. A passing unit test does **not** prove the actual route applies validation; route tests address that gap.
 
 ## 5. Residual risk and future controls
 
