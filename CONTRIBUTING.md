@@ -1,7 +1,7 @@
 # GitHub Collaboration
 
 **Project:** EcoCharge Fleet Dashboard  
-**Team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi
+**Course Team 4:** Hamdan Mohammad Saeed Bin Salmin Albedwawi; Nasser Fuad Abdulla Ahmad Anwahi; Sultan Ibrahim Mohamad Allanjawi
 
 GitHub provides the source-code history for this software engineering project. The repository includes the original fleet overview and calculator feature branches, their pull requests, and the subsequent improvements to application security, modularity, testing, and documentation.
 
@@ -13,7 +13,7 @@ The repository uses GitHub Actions to execute tests after code changes. This cre
 
 ## Collaborative software engineering
 
-The sprint plan describes responsibilities for coordination, application development, and testing. The three members report developing and managing the repository using the **same shared GitHub account (`nasserfuad1987`)**. This explains why the commits and pull requests appear under one username. The GitHub history records shared-account activity rather than individual authorship; task assignments indicate roles but do not independently verify which member performed each action.
+The sprint plan describes responsibilities for coordination, application development, and testing. The three members report developing and managing the repository using the **same shared GitHub account (`nasserfuad1987`)**. This explains why the commits and pull requests appear under one username. The GitHub history records shared-account activity rather than individual authorship; task assignments describe the group's planned distribution of work. The assignment specifies feature branches, merged requests, and meaningful commits as evidence of collaboration.
 
 ## Code quality conventions
 
