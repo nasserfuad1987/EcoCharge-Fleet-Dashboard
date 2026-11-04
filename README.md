@@ -67,9 +67,9 @@ These measures are **not a guarantee of production security**. Deploying real fl
 
 **Project team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi.
 
-**Planned sprint:** October 26–November 8, 2026 (14 days). **Submission deadline:** November 8, 2026, at 11:59 PM.
+**Sprint period:** October 26–November 8, 2026 (planned).
 
-### Planned responsibilities
+### Team responsibilities (sprint plan)
 
 - **Nasser Anwahi:** Repository coordination, fleet overview, README, and Agile documentation.
 - **Sultan Allanjawi:** Charging calculator, server-side validation, and application development.
@@ -79,11 +79,11 @@ These measures are **not a guarantee of production security**. Deploying real fl
 
 - `feature/fleet-overview` — Fleet overview and initial Flask application. [Pull Request #1 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/1).
 - `feature/cost-calculator` — Automated tests, GitHub Actions, and project documentation. [Pull Request #2 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/2).
-- `improvement/security-testing-report` — Enhanced application structure, validation, security analysis, and expanded testing. [Pull Request #4 (open for review)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/4).
+- `improvement/security-testing-report` — Enhanced application structure, validation, security analysis, and expanded testing. [Pull Request #4 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/4).
 
 **Testing evidence:** [GitHub Actions — 19 successful tests](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476).
 
-GitHub is being used instead of GitLab with the instructor's approval. Team members should document their actual code contributions and independent pull-request reviews before submitting; assigning responsibilities does not establish that those tasks have been performed.
+GitHub was used in place of GitLab with the instructor's approval. Pull requests and commit history record the repository's development activity.
 
 ## Documentation
 
@@ -91,14 +91,13 @@ GitHub is being used instead of GitLab with the instructor's approval. Team memb
 - [Architecture and data flow](docs/architecture.md)
 - [Product backlog](docs/product_backlog.md)
 - [Sprint plan](docs/sprint_plan.md)
-- [Retrospective draft (verify and personalize)](docs/sprint_retrospective.md)
+- [Sprint retrospective](docs/sprint_retrospective.md)
 - [Security memo (~200 words)](docs/security_memo.md)
 - [Extended security analysis](docs/security_analysis.md)
 - [ACM ethics memo (~200 words)](docs/ethical_considerations.md)
 - [Test plan and evidence register](docs/testing_evidence.md)
 - [Code review and prevented defect](docs/code_review.md)
 - [Five-minute demo script](docs/demo_script.md)
-- [Final submission evidence checklist](docs/submission_checklist.md)
 - [Review of previous assignment and improvements](docs/reference_review.md)
 
 ## Constraints
