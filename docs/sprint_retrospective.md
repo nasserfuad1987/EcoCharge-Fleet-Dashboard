@@ -6,7 +6,7 @@
 
 ### What Went Well
 
-The repository now contains both required features: a five-vehicle overview and a charging-cost calculator. Separating the data, calculation, and webpage makes the advanced version easier to understand. GitHub Actions also confirmed 19 passing tests on the advanced branch, including checks for invalid input.
+The repository now contains both required features: a five-vehicle overview and a charging-cost calculator. Separating the data, calculation, and webpage makes the advanced version easier to understand. GitHub Actions also confirmed 25 passing tests on the advanced branch, including checks for invalid input.
 
 ### What Was Challenging
 
