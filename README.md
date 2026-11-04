@@ -37,16 +37,25 @@ HTML input restrictions can be bypassed by manually crafted HTTP requests. Witho
 
 ## GitHub Collaboration
 
-Feature branches:
-- `feature/fleet-overview` — Flask page, sample vehicles, charging form.
-- `feature/cost-calculator` — calculator tests, GitHub Actions, project documentation.
+**Project team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi.
 
-**Pull requests:** [Fleet Overview PR #1](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/1). Add the second PR link and record actual review/merge history after teammates review.
+**Planned sprint:** October 26–November 8, 2026 (14 days). **Submission deadline:** November 8, 2026, at 11:59 PM.
 
-**Team members:** [Add real names, GitHub handles, and individual contributions]
-**Sprint dates:** [Add actual two-week period]
+### Planned responsibilities
 
-> Branch creation and PR authorship by one account do not by themselves demonstrate a 3–4-person collaboration. Have each teammate make meaningful changes and complete actual peer reviews, and show these in the demo.
+- **Nasser Anwahi:** Repository coordination, fleet overview, README, and Agile documentation.
+- **Sultan Allanjawi:** Charging calculator, server-side validation, and application development.
+- **Hamdan Albedwawi:** Unit testing, security risk assessment, ethical analysis, and quality assurance.
+
+### Feature branches and pull requests
+
+- `feature/fleet-overview` — Fleet overview and initial Flask application. [Pull Request #1 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/1).
+- `feature/cost-calculator` — Automated tests, GitHub Actions, and project documentation. [Pull Request #2 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/2).
+- `improvement/security-testing-report` — Enhanced application structure, validation, security analysis, and expanded testing. [Pull Request #4 (open for review)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/4).
+
+**Testing evidence:** [GitHub Actions — 19 successful tests](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476).
+
+GitHub is being used instead of GitLab with the instructor's approval. Team members should document their actual code contributions and independent pull-request reviews before submitting; assigning responsibilities does not establish that those tasks have been performed.
 
 ## Documentation
 
@@ -56,10 +65,3 @@ Feature branches:
 - [Security Memo](docs/security_memo.md)
 - [ACM Ethics Memo](docs/ethical_considerations.md)
 - [Demo Outline](docs/demo_script.md)
-
-## Notes
-
-- All displayed costs are in USD and use fixed assignment rates; these are **not live electricity tariffs**.
-- The selected vehicle does not affect the fixed-rate formula.
-- The original Colab implementation is available via the separately shared course notebook.
-- Before real deployment, add authentication, authorization, and privacy controls.
