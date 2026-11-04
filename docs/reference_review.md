@@ -14,7 +14,7 @@ The previous group organized its report around project setup, Agile planning, te
 
 **1. Stronger validation in the actual application.** The reference's browser example accepted negative charging hours, although its separate testing file rejected them. Our application's backend uses the same validated charging function exercised by unit tests and HTTP integration tests, so negative hours do not produce a price.
 
-**2. More reproducible testing.** The reference described three tests and reported their results. Our implemented application contains 12 calculator unit tests plus seven HTTP integration tests. A [successful GitHub Actions run](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41883696384) verifies all 19. Passing tests support the tested behaviors but do not prove the application has no bugs.
+**2. More reproducible testing.** The reference described three tests and reported their results. Our implemented application contains 12 calculator unit tests plus 13 HTTP integration tests. A [successful GitHub Actions run](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41889004694) verifies all 25. Passing tests support the tested behaviors but do not prove the application has no bugs.
 
 **3. Better separation of files.** The advanced EcoCharge code separates static fleet records, the calculation function, Flask routing, and page styling. This makes the small project easier to inspect and maintain.
 
