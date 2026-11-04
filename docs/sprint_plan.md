@@ -2,7 +2,7 @@
 
 **Project:** EcoCharge Fleet Dashboard  
 **Course:** ICS 432 – Software Engineering  
-**Team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi  
+**Course Team 4:** Hamdan Mohammad Saeed Bin Salmin Albedwawi; Nasser Fuad Abdulla Ahmad Anwahi; Sultan Ibrahim Mohamad Allanjawi  
 **Planned sprint:** October 26–November 8, 2026 (14 days)  
 
 ## 1. Sprint Goal
@@ -13,9 +13,9 @@ The application is a **prototype**: the vehicle data is static and the charging 
 
 ## 2. Planned Roles
 
-- **Nasser Anwahi — Project coordination and documentation:** organize the repository, maintain the product backlog and sprint plan, help with the fleet overview, and check the final README.
-- **Sultan Allanjawi — Application development:** focus on the vehicle-selection form, charging formula, and handling invalid duration inputs.
-- **Hamdan Albedwawi — Quality and responsible software:** focus on calculator testing, potential security risks, and the ACM ethics memo.
+- **Nasser Fuad Abdulla Ahmad Anwahi — Project coordination and documentation:** organize the repository, maintain the product backlog and sprint plan, help with the fleet overview, and check the final README.
+- **Sultan Ibrahim Mohamad Allanjawi — Application development:** focus on the vehicle-selection form, charging formula, and handling invalid duration inputs.
+- **Hamdan Mohammad Saeed Bin Salmin Albedwawi — Quality and responsible software:** focus on calculator testing, potential security risks, and the ACM ethics memo.
 - **All members:** inspect the final features, review each other's actual work, and participate in the demonstration.
 
 The team used the shared GitHub account `nasserfuad1987` for repository activity. Commits and pull requests document work completed through that account, while the planned member responsibilities describe the group's division of tasks; the platform does not distinguish individual contributions.
@@ -40,7 +40,7 @@ The team used the shared GitHub account `nasserfuad1987` for repository activity
 
 **November 2–4 — Integration and testing:** connect the form to the calculation function, reject invalid values, run automated tests, and document potential weaknesses.
 
-**November 5–6 — Documentation and peer review:** finish the two short memos, check the README, and request genuine teammate feedback on pull requests.
+**November 5–6 — Documentation and code review:** complete the security and ethics memos, review the README, and document the potential bug prevented through code or testing.
 
 **November 7 — Final review:** verify the features and test results, complete a retrospective from actual observations, and record the five-minute demonstration.
 
@@ -50,14 +50,14 @@ The team used the shared GitHub account `nasserfuad1987` for repository activity
 
 ## 5. Scrum Check-ins and Definition of Done
 
-The Scrum workflow includes sprint planning, brief progress discussions, pull-request review, and a sprint retrospective.
+The simplified Scrum workflow covers sprint planning, task progress, integrating feature branches through pull requests, and reflecting on the sprint.
 
-A task is done when its acceptance criteria are met; relevant changes and tests are saved in GitHub; the documentation is updated; and a teammate has reviewed the changes where required.
+A task is done when its acceptance criteria are met; relevant changes and tests are saved in GitHub; the documentation is updated; and the required feature branches have been merged into `main`.
 
 ## 6. Deliverables and Evidence
 
 - **Source code:** `app.py` plus related modules and interface files in the final `main` branch.
 - **Feature history:** [PR #1](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/1) and [PR #2](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/2) are merged; [PR #4](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/4) merged the advanced implementation.
-- **Automated testing:** [GitHub Actions evidence](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41883696384) records 19 passing tests on the advanced branch.
+- **Automated testing:** [GitHub Actions evidence](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41889860974) records 25 passing tests on `main`.
 - **Written evidence:** backlog, retrospective, security and ethical analysis, and README in `docs/` and the repository root.
 - **Demonstration design:** The demonstration outline covers the fleet, calculator, tests, and GitHub history.
