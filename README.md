@@ -97,6 +97,8 @@ GitHub is being used instead of GitLab with the instructor's approval. Team memb
 - [Test plan and evidence register](docs/testing_evidence.md)
 - [Code review and prevented defect](docs/code_review.md)
 - [Five-minute demo script](docs/demo_script.md)
+- [Final submission evidence checklist](docs/submission_checklist.md)
+- [Review of previous assignment and improvements](docs/reference_review.md)
 
 ## Constraints
 
