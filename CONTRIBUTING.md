@@ -13,7 +13,7 @@ The repository uses GitHub Actions to execute tests after code changes. This cre
 
 ## Collaborative software engineering
 
-The sprint plan describes responsibilities for coordination, application development, and testing. GitHub records show which accounts authored and merged changes; an assigned responsibility in a plan is not the same as a verified individual commit or review. Those records are presented as they exist, without attributing unverified actions to other members.
+The sprint plan describes responsibilities for coordination, application development, and testing. The three members report developing and managing the repository using the **same shared GitHub account (`nasserfuad1987`)**. This explains why the commits and pull requests appear under one username. The GitHub history records shared-account activity rather than individual authorship; task assignments indicate roles but do not independently verify which member performed each action.
 
 ## Code quality conventions
 
