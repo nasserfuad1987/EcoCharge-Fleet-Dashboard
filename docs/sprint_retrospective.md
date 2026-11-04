@@ -1,11 +1,22 @@
-# Sprint Retrospective (complete after actual sprint; approximately 150 words)
+# Sprint Retrospective
 
-**What went well:** [Describe actual implemented features, team coordination and any genuine successful reviews, citing evidence.]
+**Project:** EcoCharge Fleet Dashboard  
+**Course:** ICS 432 – Software Engineering  
+**Sprint Period:** October 26 – November 8, 2026  
+**Team Members:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi
 
-**What was challenging:** [Identify problems actually encountered, such as merging, running Flask or validating input.]
+### What Went Well
 
-**What we would do differently:** [Specify improvements to task planning, earlier peer feedback, and testing.]
+The development process successfully produced a functional EV fleet dashboard and charging cost calculator. GitHub provided an organized environment for managing source code, feature branches, and pull requests. Automated testing verified the application's functionality, with all 19 tests passing, including 12 unit tests and seven integration tests.
 
-**Actions for next sprint:** [State at least one specific action and owner.]
+### What Was Challenging
 
-**Important:** Replace every prompt with truthful observations after your group finishes. This template does not claim two weeks of meetings or peer contributions that have not occurred.
+The main challenges involved implementing reliable server-side validation, ensuring accurate monetary calculations, and understanding GitHub's branching and merging workflow. Addressing potential security vulnerabilities also required careful consideration.
+
+### What We Would Do Differently
+
+Future sprints would benefit from earlier testing, clearer task allocation, and more frequent peer reviews. Establishing acceptance criteria before development would also improve efficiency.
+
+### Actions for the Next Sprint
+
+Nasser will coordinate GitHub planning, Sultan will prioritize code improvements, and Hamdan will expand testing and security reviews. These actions aim to strengthen collaboration, maintainability, and software quality.
