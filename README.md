@@ -36,7 +36,7 @@ python -m compileall -q app.py calculator.py fleet.py
 
 **Unit tests:** `tests/test_calculator.py` targets only cost calculation as required, including boundary and invalid-value cases.
 
-**Additional integration tests:** `tests/test_routes.py` checks real Flask GET/POST behavior, vehicle allowlist, escaped markup, security headers and request size. **Verified CI evidence:** [GitHub Actions run 41868004476](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476) completed successfully with **19/19 tests** (12 unit + 7 Flask integration). The run was inspected, including its execution log.
+**Additional integration tests:** `tests/test_routes.py` checks real Flask GET/POST behavior, vehicle allowlist, invalid and boundary inputs, HTML escaping, security headers, request size and unknown routes. **Verified CI evidence:** [GitHub Actions run 41889004694](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41889004694) completed successfully with **25/25 tests** (12 unit + 13 Flask integration).
 
 **Defect prevented:** A crafted HTTP request can bypass browser numeric controls. Without server validation, `-8` hours would incorrectly yield -$9.00. `calculator.py` rejects negative, nonnumeric, nonfinite and over-limit values; the Flask handler displays an error. See [Code Review](docs/code_review.md).
 
@@ -81,7 +81,7 @@ These measures are **not a guarantee of production security**. Deploying real fl
 - `feature/cost-calculator` — Automated tests, GitHub Actions, and project documentation. [Pull Request #2 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/2).
 - `improvement/security-testing-report` — Enhanced application structure, validation, security analysis, and expanded testing. [Pull Request #4 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/4).
 
-**Testing evidence:** [GitHub Actions — 19 successful tests](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476).
+**Testing evidence:** [GitHub Actions — 25 successful tests](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41889004694).
 
 GitHub was used in place of GitLab with the instructor's approval. Pull requests and commit history record the repository's development activity.
 
