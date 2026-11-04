@@ -65,15 +65,15 @@ These measures are **not a guarantee of production security**. Deploying real fl
 
 ## GitHub Collaboration
 
-**Project team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi.
+**Course Team 4:** Hamdan Mohammad Saeed Bin Salmin Albedwawi; Nasser Fuad Abdulla Ahmad Anwahi; Sultan Ibrahim Mohamad Allanjawi.
 
 **Sprint period:** October 26–November 8, 2026 (planned).
 
 ### Team responsibilities (sprint plan)
 
-- **Nasser Anwahi:** Repository coordination, fleet overview, README, and Agile documentation.
-- **Sultan Allanjawi:** Charging calculator, server-side validation, and application development.
-- **Hamdan Albedwawi:** Unit testing, security risk assessment, ethical analysis, and quality assurance.
+- **Nasser Fuad Abdulla Ahmad Anwahi:** Repository coordination, fleet overview, README, and Agile documentation.
+- **Sultan Ibrahim Mohamad Allanjawi:** Charging calculator, server-side validation, and application development.
+- **Hamdan Mohammad Saeed Bin Salmin Albedwawi:** Unit testing, security risk assessment, ethical analysis, and quality assurance.
 
 ### Feature branches and pull requests
 
@@ -87,7 +87,7 @@ GitHub was used in place of GitLab with the instructor's approval. **The three t
 
 ## Documentation
 
-- [Student collaboration and PR review guide](CONTRIBUTING.md)
+- [GitHub collaboration overview](CONTRIBUTING.md)
 - [Architecture and data flow](docs/architecture.md)
 - [Product backlog](docs/product_backlog.md)
 - [Sprint plan](docs/sprint_plan.md)
