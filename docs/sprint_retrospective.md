@@ -20,4 +20,4 @@ We would agree on file ownership and review points earlier, then check the READM
 
 Nasser will coordinate repository updates, Sultan will check application behavior, and Hamdan will maintain testing and security checks. These responsibilities describe the intended focus for continued project maintenance.
 
-The repository's commit history is the source of evidence for individual contributions and reviews.
+The group used a shared GitHub account, so repository commits appear under one username rather than showing each student's separate contributions. This limits what the GitHub history can establish about individual participation.
