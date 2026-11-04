@@ -63,17 +63,27 @@ docs/                        Agile plan, ethics, risk analysis, evidence and dem
 
 These measures are **not a guarantee of production security**. Deploying real fleet telemetry requires access controls, HTTPS, monitoring, data policies and a new risk assessment.
 
-## GitHub collaboration evidence
+## GitHub Collaboration
 
-- [PR #1: fleet overview](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/1) - merged
-- [PR #2: tests and planning documents](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/2) - merged
-- A subsequent code-quality improvement PR may be added and should be peer-reviewed.
+**Project team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi.
 
-**Team members:** [Fill actual names and usernames]  
-**Two-week sprint dates:** [Fill actual start and end]  
-**Instructor-approved change:** GitHub may substitute for GitLab (retain approval evidence).
+**Planned sprint:** October 26–November 8, 2026 (14 days). **Submission deadline:** November 8, 2026, at 11:59 PM.
 
-The first two PRs were merged using one linked GitHub account. **They are not evidence of independent student reviews.** Each group member should make identifiable contributions and give genuine PR feedback.
+### Planned responsibilities
+
+- **Nasser Anwahi:** Repository coordination, fleet overview, README, and Agile documentation.
+- **Sultan Allanjawi:** Charging calculator, server-side validation, and application development.
+- **Hamdan Albedwawi:** Unit testing, security risk assessment, ethical analysis, and quality assurance.
+
+### Feature branches and pull requests
+
+- `feature/fleet-overview` — Fleet overview and initial Flask application. [Pull Request #1 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/1).
+- `feature/cost-calculator` — Automated tests, GitHub Actions, and project documentation. [Pull Request #2 (merged)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/2).
+- `improvement/security-testing-report` — Enhanced application structure, validation, security analysis, and expanded testing. [Pull Request #4 (open for review)](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/4).
+
+**Testing evidence:** [GitHub Actions — 19 successful tests](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476).
+
+GitHub is being used instead of GitLab with the instructor's approval. Team members should document their actual code contributions and independent pull-request reviews before submitting; assigning responsibilities does not establish that those tasks have been performed.
 
 ## Documentation
 
