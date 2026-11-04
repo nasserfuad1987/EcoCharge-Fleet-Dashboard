@@ -1,39 +1,67 @@
 # EcoCharge Fleet Dashboard
 
-**ICS 432 — Software Engineering** | EcoCharge Innovations | Educational prototype
+**ICS 432 - Software Engineering | EcoCharge Innovations | Educational prototype**
 
-A lightweight Flask web dashboard for monitoring a fixed sample of five electric vehicles and estimating charging costs. Battery percentages and statuses are **static illustrative data**, not live vehicle readings. All sample models are battery-electric vehicles.
+A responsive Flask web dashboard for monitoring **five predefined battery-electric vehicles** and estimating charging cost. The dashboard demonstrates software quality, collaboration, security and ethical foresight—not a production fleet service.
 
-## Features
+## Required features
 
-1. **Fleet Overview:** Lists vehicle ID, model, battery percentage, and status.
-2. **Charging Cost Calculator:** Select a vehicle, enter 0–24 hours, and estimate cost using:
-   `Cost (USD) = hours × 7.5 kW × $0.15/kWh`
-   The calculator rounds to two decimal places using decimal half-up rounding.
-3. **Validation:** Rejects negative, non-numeric, non-finite, and greater-than-24-hour durations. This upper limit is a prototype design choice.
+**Feature A - Static Fleet Overview:** Each row shows vehicle ID, model, battery percentage and status (Available, Charging or On Trip). Accessible native battery meters and summary cards make the fixed data easier to understand.
+
+**Feature B - Charging Cost Calculator:** A manager selects a vehicle and enters a duration. The deliberately fixed formula is:
+
+```text
+Estimated cost (USD) = charging duration (hours) x 7.5 kW x $0.15/kWh
+```
+
+2 hours = $2.25; 5 hours = **$5.63** (Decimal, ROUND_HALF_UP). The selected vehicle does not change the tariff. Inputs must be finite numbers from 0 to 24 hours, inclusive; these bounds are a prototype choice.
 
 ## Setup and application demonstration
 
 The dashboard is a Flask application. GitHub stores its source code and automatically runs tests, but does not host the interactive website. To demonstrate both required features in the five-minute recording, run the application in a Python environment (or use the separately shared Colab prototype, which may differ from the latest GitHub version).
 
-Requires Python 3.10+.
+Requires Python 3.10+. Clone or download this repository first. From the project folder:
 
 ```bash
 python3 -m pip install -r requirements.txt
 python3 app.py
 ```
 
-## Unit Tests
+## Test and analyze
 
 ```bash
 python -m unittest discover -s tests -v
+python -m compileall -q app.py calculator.py fleet.py
 ```
 
-The tests check positive and fractional hours, currency rounding, and rejection of negative, non-numeric, non-finite and excessive values. GitHub Actions is configured to run tests on pushes and pull requests.
+**Unit tests:** `tests/test_calculator.py` targets only cost calculation as required, including boundary and invalid-value cases.
 
-### Potential bug identified and prevented
+**Additional integration tests:** `tests/test_routes.py` checks real Flask GET/POST behavior, vehicle allowlist, escaped markup, security headers and request size. **Verified CI evidence:** [GitHub Actions run 41868004476](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476) completed successfully with **19/19 tests** (12 unit + 7 Flask integration). The run was inspected, including its execution log.
 
-HTML input restrictions can be bypassed by manually crafted HTTP requests. Without server-side validation, a negative charging duration or `NaN` could yield a misleading charge or crash the calculation. The Python function converts inputs to `Decimal`, checks finite values and the allowed range, and raises a `ValueError` for invalid input. The web route renders a friendly error. The tests target this behavior.
+**Defect prevented:** A crafted HTTP request can bypass browser numeric controls. Without server validation, `-8` hours would incorrectly yield -$9.00. `calculator.py` rejects negative, nonnumeric, nonfinite and over-limit values; the Flask handler displays an error. See [Code Review](docs/code_review.md).
+
+## Project structure
+
+```text
+app.py                       Flask routes, form handling, security headers
+calculator.py                Pure Decimal charging-cost function
+fleet.py                     Five fixed BEV records and allowed IDs
+templates/index.html         Jinja page (autoescaped dynamic output)
+static/styles.css            Responsive visual design
+tests/test_calculator.py     Cost logic unit tests
+tests/test_routes.py         Web route integration tests
+.github/workflows/tests.yml  GitHub Actions testing
+docs/                        Agile plan, ethics, risk analysis, evidence and demo
+```
+
+## Security and ethics by design
+
+- Server-side numeric checks, known vehicle IDs, small request size limit
+- Escaped Jinja templates, restrictive Content Security Policy, no inline scripts
+- Local-only Flask development server, debug disabled, no tokens or external tunnels
+- No accounts, real GPS data, driver identities, payments or live charging hardware
+
+These measures are **not a guarantee of production security**. Deploying real fleet telemetry requires access controls, HTTPS, monitoring, data policies and a new risk assessment.
 
 ## GitHub Collaboration
 
@@ -59,9 +87,20 @@ GitHub is being used instead of GitLab with the instructor's approval. Team memb
 
 ## Documentation
 
-- [Product Backlog](docs/product_backlog.md)
-- [Sprint Plan](docs/sprint_plan.md)
-- [Sprint Retrospective Template](docs/sprint_retrospective.md)
-- [Security Memo](docs/security_memo.md)
-- [ACM Ethics Memo](docs/ethical_considerations.md)
-- [Demo Outline](docs/demo_script.md)
+- [Student collaboration and PR review guide](CONTRIBUTING.md)
+- [Architecture and data flow](docs/architecture.md)
+- [Product backlog](docs/product_backlog.md)
+- [Sprint plan](docs/sprint_plan.md)
+- [Retrospective draft (verify and personalize)](docs/sprint_retrospective.md)
+- [Security memo (~200 words)](docs/security_memo.md)
+- [Extended security analysis](docs/security_analysis.md)
+- [ACM ethics memo (~200 words)](docs/ethical_considerations.md)
+- [Test plan and evidence register](docs/testing_evidence.md)
+- [Code review and prevented defect](docs/code_review.md)
+- [Five-minute demo script](docs/demo_script.md)
+- [Final submission evidence checklist](docs/submission_checklist.md)
+- [Review of previous assignment and improvements](docs/reference_review.md)
+
+## Constraints
+
+The data is illustrative, and the fixed power and price do not account for real charging efficiency, grid tariffs, battery state of charge or market rates. Do not use the output for actual billing or operational dispatch. This release has no database, live vehicle API or location tracking.

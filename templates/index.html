@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EcoCharge Innovations educational fleet monitoring prototype.">
+  <title>EcoCharge | Fleet Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">E</span>
+        <span>EcoCharge <small>INNOVATIONS</small></span>
+      </div>
+      <span class="eyebrow">FLEET OPERATIONS / PROTOTYPE</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-heading">
+        <div>
+          <p class="eyebrow hero-label">FLEET INTELLIGENCE, SIMPLIFIED</p>
+          <h1 id="page-heading">Electric mobility.<br><em>Clearer decisions.</em></h1>
+          <p>Monitor a small sample fleet and estimate charging costs using transparent, fixed assumptions.</p>
+        </div>
+        <div class="hero-aside" aria-label="Prototype details">
+          <strong>Educational dashboard</strong>
+          <span>Five battery-electric vehicles</span>
+          <span>Static data / not live telemetry</span>
+          <span>Estimated costs in USD</span>
+        </div>
+      </section>
+
+      <section class="summary-grid" aria-label="Fleet summary">
+        <div class="metric"><span>Total EVs</span><strong>{{ fleet|length }}</strong><small>Sample fleet</small></div>
+        <div class="metric"><span>Available</span><strong>{{ counts["Available"] }}</strong><small>Ready for dispatch</small></div>
+        <div class="metric"><span>Charging</span><strong>{{ counts["Charging"] }}</strong><small>Current sample status</small></div>
+        <div class="metric"><span>On Trip</span><strong>{{ counts["On Trip"] }}</strong><small>Current sample status</small></div>
+      </section>
+
+      <section class="panel" aria-labelledby="fleet-title">
+        <div class="section-head"><div><p class="eyebrow">FEATURE A</p>
+          <h2 id="fleet-title">Fleet overview</h2></div>
+          <span class="tag">Static sample data</span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <caption class="sr-only">Five predefined electric vehicles with battery levels and statuses</caption>
+            <thead><tr><th scope="col">Vehicle ID</th><th scope="col">Model</th>
+              <th scope="col">Battery</th><th scope="col">Status</th></tr></thead>
+            <tbody>
+              {% for vehicle in fleet %}
+              <tr>
+                <td><span class="mono">{{ vehicle.id }}</span></td>
+                <td class="model-name">{{ vehicle.model }}</td>
+                <td>
+                  <div class="battery">
+                    <meter min="0" max="100" value="{{ vehicle.battery }}"
+                      aria-label="{{ vehicle.id }} battery: {{ vehicle.battery }} percent">{{ vehicle.battery }}%</meter>
+                    <span>{{ vehicle.battery }}%</span>
+                  </div>
+                </td>
+                <td><span class="status status-{{ vehicle.status|lower|replace(' ', '-') }}">{{ vehicle.status }}</span></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p class="fineprint">Battery percentages and statuses are predefined examples. This application does not access real vehicles.</p>
+      </section>
+
+      <section class="panel calculator" aria-labelledby="calc-title">
+        <div class="section-head"><div><p class="eyebrow">FEATURE B</p><h2 id="calc-title">Charging cost calculator</h2></div>
+          <span class="tag">Fixed-rate estimate</span>
+        </div>
+        <div class="calc-layout">
+          <form method="post" action="{{ url_for('home') }}">
+            <label for="vehicle">Select a vehicle</label>
+            <select id="vehicle" name="vehicle_id" required>
+              {% for vehicle in fleet %}
+              <option value="{{ vehicle.id }}" {% if selected == vehicle.id %}selected{% endif %}>{{ vehicle.id }} · {{ vehicle.model }}</option>
+              {% endfor %}
+            </select>
+            <label for="hours">Charging duration <small>(hours)</small></label>
+            <input id="hours" name="duration" type="number" min="0" max="24" step="any"
+              inputmode="decimal" placeholder="e.g. 2" value="{{ duration }}" required
+              aria-describedby="hours-help">
+            <p id="hours-help" class="hint">Enter a duration from 0 to 24 hours. Rates are the same for every vehicle.</p>
+            <button type="submit">Calculate estimated cost <span aria-hidden="true">→</span></button>
+            {% if error %}<p class="alert" role="alert">{{ error }}</p>{% endif %}
+            {% if cost is not none %}
+            <div class="result" role="status" aria-live="polite">
+              <span>Estimated charging cost</span><strong>${{ cost }}</strong>
+              <small>USD · {{ duration }} hours · {{ selected }}</small>
+            </div>
+            {% endif %}
+          </form>
+          <aside class="formula" aria-label="Charging calculation method">
+            <h3>How we calculate</h3>
+            <div class="formula-step"><span>01</span><p>Duration in hours</p></div>
+            <div class="formula-step"><span>02</span><p>× 7.5 kW fixed charging power</p></div>
+            <div class="formula-step"><span>03</span><p>× $0.15 / kWh fixed electricity price</p></div>
+            <div class="equation">Cost = hours × 7.5 × 0.15</div>
+            <p>For example, <strong>2 hours = $2.25</strong>. This is a simplified learning model, not a tariff or live billing quotation.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer><span>EcoCharge Innovations · ICS 432 Software Engineering</span><span>Privacy-first prototype · No driver location data</span></footer>
+  </div>
+</body>
+</html>
