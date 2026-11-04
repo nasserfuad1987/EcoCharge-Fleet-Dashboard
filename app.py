@@ -50,4 +50,4 @@ def home():
 
 if __name__ == "__main__":
     # Local-only development server; do not expose publicly as a production server.
-    app.run(host="127.0.0.1", port=5000, debug=False)
+    app.run(host="127.0.0.1", port=5050, debug=False)
