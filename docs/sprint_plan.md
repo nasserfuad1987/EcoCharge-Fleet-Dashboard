@@ -18,7 +18,7 @@ The application is a **prototype**: the vehicle data is static and the charging 
 - **Hamdan Albedwawi — Quality and responsible software:** focus on calculator testing, potential security risks, and the ACM ethics memo.
 - **All members:** inspect the final features, review each other's actual work, and participate in the demonstration.
 
-Individual contributions are documented by the repository's commit and pull request history.
+The team used the shared GitHub account `nasserfuad1987` for repository activity. Commits and pull requests document work completed through that account, while the planned member responsibilities describe the group's division of tasks; the platform does not distinguish individual contributions.
 
 ## 3. Product Backlog and Sprint Tasks
 
