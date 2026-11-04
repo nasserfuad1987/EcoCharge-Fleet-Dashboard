@@ -16,21 +16,27 @@ Estimated cost (USD) = charging duration (hours) x 7.5 kW x $0.15/kWh
 
 2 hours = $2.25; 5 hours = **$5.63** (Decimal, ROUND_HALF_UP). The selected vehicle does not change the tariff. Inputs must be finite numbers from 0 to 24 hours, inclusive; these bounds are a prototype choice.
 
-## Run locally
+## Running and demonstrating the dashboard
+
+The GitHub repository stores source code and evidence; **it does not host the Flask website**. Running the app on your own computer is **optional for reviewing the repository or GitHub Actions tests**, but the course's five-minute demo must show the actual working interface. You may demonstrate the original, separately shared Google Colab prototype, noting that it is a separate version and may not include the advanced GitHub features. To demonstrate the advanced GitHub version, run/deploy this version in an environment that supports Flask.
+
+### Optional: run this version locally
 
 Requires Python 3.10+.
 
 ```bash
 git clone https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard.git
 cd EcoCharge-Fleet-Dashboard
-python -m venv .venv
+python3 -m venv .venv
 # macOS/Linux: source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-python app.py
+# Windows PowerShell: .venv\\Scripts\\Activate.ps1
+python3 -m pip install -r requirements.txt
+python3 app.py
 ```
 
-Open http://127.0.0.1:5000 and stop the server with Ctrl+C.
+**After the server starts**, visit **http://127.0.0.1:5050** on the same computer. The link is not publicly hosted. Stop Flask using Ctrl+C.
+
+**Why port 5050?** Some Macs reserve port 5000 for another service (such as AirPlay Receiver), which can show HTTP 403. If port 5050 is also occupied, choose an available port and edit the last line of `app.py`.
 
 ## Test and analyze
 
