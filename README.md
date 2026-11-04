@@ -41,7 +41,7 @@ python -m compileall -q app.py calculator.py fleet.py
 
 **Unit tests:** `tests/test_calculator.py` targets only cost calculation as required, including boundary and invalid-value cases.
 
-**Additional integration tests:** `tests/test_routes.py` checks real Flask GET/POST behavior, vehicle allowlist, escaped markup, security headers and request size. **Tests are not automatically considered passing unless their actual completed output is inspected.**
+**Additional integration tests:** `tests/test_routes.py` checks real Flask GET/POST behavior, vehicle allowlist, escaped markup, security headers and request size. **Verified CI evidence:** [GitHub Actions run 41868004476](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476) completed successfully with **19/19 tests** (12 unit + 7 Flask integration). The run was inspected, including its execution log.
 
 **Defect prevented:** A crafted HTTP request can bypass browser numeric controls. Without server validation, `-8` hours would incorrectly yield -$9.00. `calculator.py` rejects negative, nonnumeric, nonfinite and over-limit values; the Flask handler displays an error. See [Code Review](docs/code_review.md).
 
