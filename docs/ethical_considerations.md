@@ -1,12 +1,11 @@
-# Ethical Considerations Memo — Fleet Location Privacy
+# Ethical Memo (approximately 200 words): Location Privacy
 
-**To:** EcoCharge Innovations Project Team
-**Subject:** Privacy protections for a future connected fleet
+**Ethical question.** If EcoCharge expanded from static records to real-time GPS tracking, would the operational benefit justify continuous observation of drivers? Vehicle trajectories can reveal home locations, work schedules, religious visits, breaks, and potentially sensitive personal routines. Even if names are removed, repeated travel patterns may re-identify individuals. Using these records for disciplinary decisions without transparency could undermine trust and create unequal power between managers and employees.
 
-A future EcoCharge system might display real-time vehicle locations to help managers schedule charging and trips. However, repeated location observations could reveal drivers' daily routines, workplaces, breaks, and visits to sensitive places. Even when location records use vehicle identifiers rather than names, managers may be able to infer which driver operated a particular vehicle. This could create intrusive workplace surveillance or expose personal information if the data is improperly shared.
+The **ACM Code of Ethics, Principle 1.6 (Respect privacy)** requires legitimate purposes, data minimization, safeguards against re-identification, and transparent collection and retention policies. **Principle 1.2 (Avoid harm)** highlights potential consequences for affected people. **Principle 2.5 (Give comprehensive evaluations)** encourages examining impacts beyond technical functionality.
 
-The **ACM Code of Ethics**, Principle **1.6 (Respect privacy)**, supports collecting only information necessary for a legitimate purpose and giving individuals understandable notice about its use. Principle **1.7 (Honor confidentiality)** also supports restricting access to sensitive information. EcoCharge should therefore apply data minimization and role-based access control. For example, dispatch managers may see a current operational location only when needed, while ordinary staff should not see identifiable trip histories. The company should also specify limited retention periods, encrypt traffic with HTTPS, maintain access logs, and communicate its collection and deletion rules to drivers.
+**Proposed mitigation.** EcoCharge should show depot-level availability by default and reveal precise location only to authorized dispatch personnel when operationally necessary. The system should use role-based access, encrypted transport, short documented retention limits, audit trails, and notices explaining who can access location histories. Drivers should have a way to inspect and challenge inaccurate records. These controls balance fleet coordination with dignity and proportionality rather than assuming that more collected data is always better.
 
-The present prototype contains only static demonstration data and does **not** track live locations. Before any live feature is deployed, the team should consult affected drivers and assess applicable data-protection requirements.
+**Scope:** the current prototype contains no real driver or GPS data.
 
-**Reference:** Association for Computing Machinery (2018), [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics).
+**Reference:** Association for Computing Machinery (2018), ACM Code of Ethics and Professional Conduct.
