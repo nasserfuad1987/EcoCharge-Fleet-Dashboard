@@ -21,7 +21,7 @@
 | Oversized request | 5000 digit duration | HTTP 413 | Route test |
 | Headers | GET / | CSP, X-Content-Type-Options, X-Frame-Options | Route test |
 
-**Execution status (4 November 2026):** The standalone calculator module and twelve corresponding unit tests were reproduced locally and executed with `python -m unittest discover -s tests -v`; **12 tests passed, 0 failed**. This was a local isolated verification, not proof that GitHub Actions or the Flask integration suite passed. The full HTTP test suite still requires a completed environment/CI run and screenshots of genuine results.
+**Execution status (4 November 2026):** The standalone calculator module was verified locally (12/12 calculator unit tests). Crucially, [GitHub Actions run 41868004476](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41868004476) **completed successfully with 19 tests: 12 calculator unit tests and 7 Flask integration tests, 0 failures**. This verifies both the pure function and its HTTP integration for the tested cases. Manual browser screenshots and independent student reviews remain to be completed.
 
 ```bash
 python -m pip install -r requirements.txt
