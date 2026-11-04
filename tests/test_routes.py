@@ -38,6 +38,51 @@ class DashboardRouteTests(unittest.TestCase):
         self.assertNotIn(payload, html)
         self.assertIn("&lt;script&gt;", html)
 
+    def test_non_numeric_post_returns_error(self):
+        response = self.client.post(
+            "/", data={"vehicle_id": "EV-001", "duration": "hello"}
+        )
+        html = response.get_data(as_text=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("Enter a valid number of hours.", html)
+        self.assertNotIn("Estimated charging cost</span><strong>", html)
+
+    def test_nonfinite_post_returns_error(self):
+        for duration in ("NaN", "Infinity", "-Infinity"):
+            with self.subTest(duration=duration):
+                response = self.client.post(
+                    "/", data={"vehicle_id": "EV-001", "duration": duration}
+                )
+                html = response.get_data(as_text=True)
+                self.assertIn("between 0 and 24", html)
+                self.assertNotIn("Estimated charging cost</span><strong>", html)
+
+    def test_maximum_duration_displays_correct_cost(self):
+        response = self.client.post(
+            "/", data={"vehicle_id": "EV-005", "duration": "24"}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("$27.00", response.get_data(as_text=True))
+
+    def test_over_maximum_duration_returns_error(self):
+        response = self.client.post(
+            "/", data={"vehicle_id": "EV-001", "duration": "24.01"}
+        )
+        html = response.get_data(as_text=True)
+        self.assertIn("between 0 and 24", html)
+        self.assertNotIn("Estimated charging cost</span><strong>", html)
+
+    def test_zero_duration_cost(self):
+        response = self.client.post(
+            "/", data={"vehicle_id": "EV-002", "duration": "0"}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("$0.00", response.get_data(as_text=True))
+
+    def test_unknown_route_returns_404(self):
+        response = self.client.get("/unknown")
+        self.assertEqual(response.status_code, 404)
+
     def test_security_headers_set(self):
         response = self.client.get("/")
         self.assertEqual(response.headers.get("X-Content-Type-Options"), "nosniff")
