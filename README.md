@@ -20,7 +20,7 @@ Estimated cost (USD) = charging duration (hours) x 7.5 kW x $0.15/kWh
 
 The dashboard is a Flask application. GitHub stores its source code and automatically runs tests, but does not host the interactive website. To demonstrate both required features in the five-minute recording, run the application in a Python environment (or use the separately shared Colab prototype, which may differ from the latest GitHub version).
 
-Requires Python 3.10+.
+Requires Python 3.10+. Clone or download this repository first. From the project folder:
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -87,6 +87,7 @@ GitHub is being used instead of GitLab with the instructor's approval. Team memb
 
 ## Documentation
 
+- [Student collaboration and PR review guide](CONTRIBUTING.md)
 - [Architecture and data flow](docs/architecture.md)
 - [Product backlog](docs/product_backlog.md)
 - [Sprint plan](docs/sprint_plan.md)
