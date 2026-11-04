@@ -12,22 +12,16 @@ A lightweight Flask web dashboard for monitoring a fixed sample of five electric
    The calculator rounds to two decimal places using decimal half-up rounding.
 3. **Validation:** Rejects negative, non-numeric, non-finite, and greater-than-24-hour durations. This upper limit is a prototype design choice.
 
-## Running the dashboard (optional local preview)
+## Setup and application demonstration
 
-The GitHub repository stores the code; **GitHub itself does not host this Flask website**. You do **not** need to open a localhost link to view the repository, read the documentation, or see automated test results. To demonstrate the actual interface for your five-minute assignment recording, you must run the application somewhere (for example locally, or use the original separately shared Google Colab prototype). The Colab notebook is a separate version and may not show the latest GitHub improvements.
+The dashboard is a Flask application. GitHub stores its source code and automatically runs tests, but does not host the interactive website. To demonstrate both required features in the five-minute recording, run the application in a Python environment (or use the separately shared Colab prototype, which may differ from the latest GitHub version).
 
-To run this GitHub version on your computer, install Python 3.10+ and use:
+Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard.git
-cd EcoCharge-Fleet-Dashboard
 python3 -m pip install -r requirements.txt
 python3 app.py
 ```
-
-**Only after Terminal says Flask is running**, open **http://127.0.0.1:5050** in a browser on the *same computer*. The address is local, not a public link, and will not work just by clicking it in GitHub. Stop the server with Ctrl+C.
-
-**Mac troubleshooting:** Port 5000 can be occupied by another service such as AirPlay Receiver and return HTTP 403. This project uses port **5050** instead. If 5050 is unavailable, choose another unused local port and update the `app.run(..., port=5050)` line in `app.py`.
 
 ## Unit Tests
 
