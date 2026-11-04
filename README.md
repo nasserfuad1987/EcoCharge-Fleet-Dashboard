@@ -83,7 +83,7 @@ These measures are **not a guarantee of production security**. Deploying real fl
 
 **Testing evidence:** [GitHub Actions — 25 successful tests](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41889004694).
 
-GitHub was used in place of GitLab with the instructor's approval. Pull requests and commit history record the repository's development activity.
+GitHub was used in place of GitLab with the instructor's approval. **The three team members worked through a shared GitHub account (`nasserfuad1987`)** to manage the repository, commits and pull requests. As a result, GitHub attributes those activities to one account even though the team reports working together. The account-level history documents the project's development, but it does not separately establish each student's individual contributions or independent peer reviews.
 
 ## Documentation
 
