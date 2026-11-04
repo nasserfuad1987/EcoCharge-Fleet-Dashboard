@@ -15,10 +15,6 @@ Treating client-side restrictions as authoritative instead of validating the inp
 ## Design tradeoff
 The 24-hour limit is a scoped prototype rule, not a physical charging constraint. A future real charger would use model-specific charging power, battery capacity, tariffs, and efficiency data. The assignment intentionally uses fixed parameters.
 
-## Review questions for teammates
-1. Can any code path bypass `calculate_charging_cost`?
-2. Are errors clear without revealing server internals?
-3. Are displayed dynamic fields safely escaped?
-4. Do automated tests cover the negative and non-numeric cases on the actual web route?
+## Testing evidence
 
-This is a documented code-review rationale, **not a claim that another student has completed an independent PR review**.
+The validation rules are implemented in `calculator.py` and called by the form route in `app.py`. Unit and Flask integration tests show that positive input is calculated correctly while negative, non-numeric, and non-finite values are rejected. This documents the potential bug identified and prevented through testing, as required by the assignment.
