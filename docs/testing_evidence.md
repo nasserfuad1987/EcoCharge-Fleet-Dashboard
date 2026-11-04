@@ -21,7 +21,7 @@
 | Oversized request | 5000 digit duration | HTTP 413 | Route test |
 | Headers | GET / | CSP, X-Content-Type-Options, X-Frame-Options | Route test |
 
-**Execution status:** Consult actual GitHub Actions job artifacts or run the commands below. Do not claim all HTTP tests pass before a completed run is visible.
+**Execution status (4 November 2026):** The standalone calculator module and twelve corresponding unit tests were reproduced locally and executed with `python -m unittest discover -s tests -v`; **12 tests passed, 0 failed**. This was a local isolated verification, not proof that GitHub Actions or the Flask integration suite passed. The full HTTP test suite still requires a completed environment/CI run and screenshots of genuine results.
 
 ```bash
 python -m pip install -r requirements.txt
