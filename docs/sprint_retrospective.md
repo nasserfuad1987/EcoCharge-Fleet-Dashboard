@@ -1,12 +1,12 @@
 # Sprint Retrospective
 
 **Project:** EcoCharge Fleet Dashboard  
-**Team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi  
+**Course Team 4:** Hamdan Mohammad Saeed Bin Salmin Albedwawi; Nasser Fuad Abdulla Ahmad Anwahi; Sultan Ibrahim Mohamad Allanjawi  
 **Planned sprint:** October 26–November 8, 2026  
 
 ### What Went Well
 
-The repository now contains both required features: a five-vehicle overview and a charging-cost calculator. Separating the data, calculation, and webpage makes the advanced version easier to understand. GitHub Actions also confirmed 25 passing tests on the advanced branch, including checks for invalid input.
+The repository now contains both required features: a five-vehicle overview and a charging-cost calculator. Separating the data, calculation, and webpage makes the advanced version easier to understand. GitHub Actions also confirmed 25 passing tests on `main`, including checks for invalid input.
 
 ### What Was Challenging
 
