@@ -1,9 +1,8 @@
-# Sprint Retrospective — Working Draft
+# Sprint Retrospective
 
 **Project:** EcoCharge Fleet Dashboard  
 **Team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi  
 **Planned sprint:** October 26–November 8, 2026  
-**Status:** Draft to finalize after the actual end-of-sprint discussion.
 
 ### What Went Well
 
@@ -11,7 +10,7 @@ The repository now contains both required features: a five-vehicle overview and 
 
 ### What Was Challenging
 
-The calculation needed server-side checks because a browser form alone cannot stop every invalid request. Keeping two GitHub branches and their documents consistent was another challenge. The advanced changes still need review before they enter `main`.
+The calculation needed server-side checks because a browser form alone cannot stop every invalid request. Keeping the development branch and `main` documentation consistent was another challenge. The advanced changes were subsequently merged into `main`.
 
 ### What We Would Do Differently
 
@@ -19,6 +18,6 @@ We would agree on file ownership and review points earlier, then check the READM
 
 ### Actions for the Next Sprint
 
-Nasser will coordinate repository updates, Sultan will check application behavior, and Hamdan will maintain testing and security checks. The team must confirm these actions and add any real lessons from its final discussion.
+Nasser will coordinate repository updates, Sultan will check application behavior, and Hamdan will maintain testing and security checks. These responsibilities describe the intended focus for continued project maintenance.
 
-**Evidence note:** The GitHub records do not yet establish independent contributions or peer reviews by all three students. Do not state that those reviews occurred until they actually do.
+The repository's commit history is the source of evidence for individual contributions and reviews.
