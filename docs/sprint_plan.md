@@ -4,7 +4,6 @@
 **Course:** ICS 432 – Software Engineering  
 **Team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi  
 **Planned sprint:** October 26–November 8, 2026 (14 days)  
-**Assignment deadline:** Sunday, November 8, 2026, at 11:59 PM (UAE time)
 
 ## 1. Sprint Goal
 
