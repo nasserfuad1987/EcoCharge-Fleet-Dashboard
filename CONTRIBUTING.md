@@ -1,47 +1,22 @@
-# Team Contribution and Pull Request Guide
+# GitHub Collaboration
 
-**ICS 432 — EcoCharge Fleet Dashboard**  
+**Project:** EcoCharge Fleet Dashboard  
 **Team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi
 
-The grading rubric rewards real collaboration, not simply the number of GitHub branches. Everyone should use their own GitHub account so their work is traceable.
+GitHub provides the source-code history for this software engineering project. The repository includes the original fleet overview and calculator feature branches, their pull requests, and the subsequent improvements to application security, modularity, testing, and documentation.
 
-## How to contribute using the GitHub website
+## Development approach
 
-1. Ask the repository owner to invite you under **Settings → Collaborators**. Accept the invitation.
-2. Open a file you can meaningfully improve; use the pencil icon to edit it.
-3. Select **Create a new branch for this commit and start a pull request** rather than modifying `main` directly.
-4. Use a descriptive branch name, for example `docs/sprint-evidence` or `test/calculator-boundaries`.
-5. Add a clear commit message that describes the actual change, such as `docs: clarify input validation rationale`.
-6. Submit the pull request with: **what changed**, **why**, **how you verified it**, and **anything the reviewer should examine**.
-7. Ask a different team member to open **Files changed → Review changes**, leave specific constructive feedback, and submit **Comment**, **Approve**, or **Request changes** as appropriate.
-8. Respond to feedback, make necessary corrections, verify GitHub Actions, and then merge if approved.
+The team organized changes through feature branches and pull requests rather than treating the application as a single untracked file. The main development history includes [PR #1 — Fleet Overview](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/1), [PR #2 — Calculator Testing and Documentation](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/2), and [PR #4 — Application Quality Improvements](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/4). All three have been merged into `main`.
 
-## Focused review checklist for PR #4
+The repository uses GitHub Actions to execute tests after code changes. This creates a reproducible record of the implemented behavior and reduces reliance on manual calculation alone.
 
-- [ ] **Nasser:** Verify the dashboard lists exactly five predefined vehicles with valid battery percentages and statuses; check README and sprint documents.
-- [ ] **Sultan:** Verify two hours produces $2.25 and that invalid hours cannot create negative or non-finite costs; check the backend form route.
-- [ ] **Hamdan:** Inspect unit tests, integration tests, security headers, and both security and ethics memos; compare documentation claims with test evidence.
-- [ ] **Reviewer:** Open [the successful 19-test run](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/actions/runs/41884746715) and confirm its result.
-- [ ] **Merge owner:** Merge [PR #4](https://github.com/nasserfuad1987/EcoCharge-Fleet-Dashboard/pull/4) after real reviews and passing checks, then verify the tests on `main`.
+## Collaborative software engineering
 
-These review assignments are **suggestions for tasks**, not proof of work done.
+The sprint plan describes responsibilities for coordination, application development, and testing. GitHub records show which accounts authored and merged changes; an assigned responsibility in a plan is not the same as a verified individual commit or review. Those records are presented as they exist, without attributing unverified actions to other members.
 
-## Genuine review comment examples
+## Code quality conventions
 
-A meaningful review should reference the actual file and behavior. For example:
+The application separates fixed fleet records (`fleet.py`), monetary calculations (`calculator.py`), web routes (`app.py`), templates, styles, and tests. The project uses descriptive filenames and commit messages. Tests cover normal charging durations, invalid inputs, and Flask form behavior.
 
-- “I checked `calculator.py`: can the form bypass the maximum-hours rule if the request is sent manually? Please verify the route test.”
-- “The fixed cost formula is correct for the assignment, but please label it as an estimate rather than actual charging expense.”
-- “The security memo describes XSS prevention. I verified that the HTML template uses escaped Jinja values; please include a test citation.”
-
-Do not post these example comments as though the observations were independently performed; examine the code first.
-
-## Evidence register for the final report
-
-| Member | Actual contribution / review | URL or commit | Date |
-|---|---|---|---|
-| Nasser Anwahi | [Complete after verifying] | [Link] | [Date] |
-| Sultan Allanjawi | [Complete after verifying] | [Link] | [Date] |
-| Hamdan Albedwawi | [Complete after verifying] | [Link] | [Date] |
-
-**Important:** The current repository history is mainly attributed to the connected Nasser account. Do not fabricate individual authorship or backdate contributions. Add each student's genuine work as it happens.
+For implementation details, see the [architecture](docs/architecture.md), [code review analysis](docs/code_review.md), and [testing evidence](docs/testing_evidence.md).
