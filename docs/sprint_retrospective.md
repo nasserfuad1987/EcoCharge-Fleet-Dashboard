@@ -1,22 +1,24 @@
-# Sprint Retrospective
+# Sprint Retrospective — Working Draft
 
 **Project:** EcoCharge Fleet Dashboard  
-**Course:** ICS 432 – Software Engineering  
-**Sprint Period:** October 26 – November 8, 2026  
-**Team Members:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi
+**Team:** Nasser Anwahi, Sultan Allanjawi, and Hamdan Albedwawi  
+**Planned sprint:** October 26–November 8, 2026  
+**Status:** Draft to finalize after the actual end-of-sprint discussion.
 
 ### What Went Well
 
-The development process successfully produced a functional EV fleet dashboard and charging cost calculator. GitHub provided an organized environment for managing source code, feature branches, and pull requests. Automated testing verified the application's functionality, with all 19 tests passing, including 12 unit tests and seven integration tests.
+The repository now contains both required features: a five-vehicle overview and a charging-cost calculator. Separating the data, calculation, and webpage makes the advanced version easier to understand. GitHub Actions also confirmed 19 passing tests on the advanced branch, including checks for invalid input.
 
 ### What Was Challenging
 
-The main challenges involved implementing reliable server-side validation, ensuring accurate monetary calculations, and understanding GitHub's branching and merging workflow. Addressing potential security vulnerabilities also required careful consideration.
+The calculation needed server-side checks because a browser form alone cannot stop every invalid request. Keeping two GitHub branches and their documents consistent was another challenge. The advanced changes still need review before they enter `main`.
 
 ### What We Would Do Differently
 
-Future sprints would benefit from earlier testing, clearer task allocation, and more frequent peer reviews. Establishing acceptance criteria before development would also improve efficiency.
+We would agree on file ownership and review points earlier, then check the README and sprint documents after every major change.
 
 ### Actions for the Next Sprint
 
-Nasser will coordinate GitHub planning, Sultan will prioritize code improvements, and Hamdan will expand testing and security reviews. These actions aim to strengthen collaboration, maintainability, and software quality.
+Nasser will coordinate repository updates, Sultan will check application behavior, and Hamdan will maintain testing and security checks. The team must confirm these actions and add any real lessons from its final discussion.
+
+**Evidence note:** The GitHub records do not yet establish independent contributions or peer reviews by all three students. Do not state that those reviews occurred until they actually do.
