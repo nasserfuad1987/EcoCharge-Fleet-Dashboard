@@ -28,7 +28,6 @@ python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
 ```
 
-**Manual evidence to capture:** dashboard showing five EV rows; calculated $2.25; rejected negative duration; completed test command; actual pull-request page. Add screenshots and timestamps to the final report only after observed.
 
 ## Traceability
 
